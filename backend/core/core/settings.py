@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1y12)alljljgtyq+0f3m$4+iwdw(9g-lg2w9941vkmx%tn#jp8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,9 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',  # Django REST Framework
-    'rest_framework.authtoken',  # Токен-аутентификация
-    'corsheaders',  # Для работы с CORS (если используете фронтенд)
+    'rest_framework',
+    'rest_framework.authtoken',
+    'corsheaders',
     'chat.apps.ChatConfig'
 ]
 
@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'UTC'
 
@@ -130,7 +130,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-# Настройки медиафайлов (для аватарок и других файлов)
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -141,7 +140,7 @@ REST_FRAMEWORK = {
     ),
 }
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React или другой фронтенд
+    "http://localhost:5173/",
 ]
 
 # Настройки аутентификации пользователя
